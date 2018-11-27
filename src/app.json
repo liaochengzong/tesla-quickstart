@@ -1,0 +1,65 @@
+{
+    "pages": [
+      "pages/index/main"
+    ],
+    "window": {
+        "navigationBarTitleText": "Demo",
+        "navigationBarBackgroundColor": "#FFFFFF",
+        "navigationBarTextStyle": "black",
+        "backgroundColor": "#eeeeee",
+        "backgroundTextStyle": "light",
+        "showContentInSystemUI":false,
+        "softInputMode":"adjustResize|stateAlwaysHidden"
+    },
+    "networkTimeout": {
+      "request": 10000,
+      "connectSocket": 10000,
+      "uploadFile" : 10000,
+      "downloadFile" : 10000
+    },
+    "debug": {
+      "host": "192.168.23.188:8081"
+    },
+    "https_cer":"XXX.cer",
+    "start_page":"index.js",
+    "mainVersion":"1.0.0",
+    "version":"1.0.0",
+    "android" : {
+      "page":{
+        "storage":{
+          "hardwareAccelerated" : false,
+          "screenOrientation" :"portrait",
+          "window":{
+            "navigationBarBackgroundColor": "yellow",
+            "navigationBarTextStyle": "black",
+            "showContentInSystemUI":true
+          }
+        },
+        "search":{
+          "window":{
+            "navigationBarBackgroundColor": "#F6F6F6",
+            "navigationBarTextStyle": "black"
+          }
+        },
+        "main":{
+              "window":{
+                "softInputMode":"adjustPan|stateAlwaysHidden"
+              }
+        },
+        "imagePreview":{
+          "window":{
+            "showContentInSystemUI":true
+          }
+        }
+      },
+      "plugin":[
+        {
+          "moduleName":"tsl-db",
+          "dependencies":["com.ucmed.mrdc:TeslaDB:0.0.0.8","com.tencent.wcdb:wcdb-android:1.0.2"],
+          "className":"com.ucmed.mrdc.teslacore.tesladb.TSLDBModule",
+          "compile":["com.ucmed.mrdc:TeslaDB:0.0.0.8","com.tencent.wcdb:wcdb-android:1.0.2"],
+          "type":"Module"
+        }
+      ]
+    }
+  }
