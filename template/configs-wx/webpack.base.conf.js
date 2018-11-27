@@ -42,19 +42,19 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      'vue': 'tslmpvue',
+      'vue': 'tesla-mpvue',
       'tesla-native-js':'tesla-native-js-wxsmall',
       '@': resolve('src')
     },
     symlinks: false,
-    aliasFields: ['tslmpvue','tesla-native-js-wxsmall', 'weapp', 'browser'],
+    aliasFields: ['tesla-mpvue','tesla-native-js-wxsmall', 'weapp', 'browser'],
     mainFields: ['browser', 'module', 'main']
   },
   module: {
     rules: [
       {
         test: /\.vue$/,
-        loader: 'tslmp-loader',
+        loader: 'tesla-mpvue-loader',
         options: vueLoaderConfig
       },
       {
@@ -63,7 +63,7 @@ module.exports = {
         use: [
           'babel-loader',
           {
-            loader: 'tslmp-loader',
+            loader: 'tesla-mpvue-loader',
             options: {
               checkMPEntry: true
             }
