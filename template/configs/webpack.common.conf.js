@@ -127,16 +127,16 @@ const pluginsWeb = [
             from: 'src/images',
             to: './images'
         },
-        {
-            from: 'static/weex-vue-render.min.js',
-            to: './weex-vue-render.min.js',
-            toType: 'file'
-        },
-        {
-            from: 'static/vue.min.js',
-            to: './vue.min.js',
-            toType: 'file'
-        },
+        // {
+        //     from: 'static/weex-vue-render.min.js',
+        //     to: './weex-vue-render.min.js',
+        //     toType: 'file'
+        // },
+        // {
+        //     from: 'static/vue.min.js',
+        //     to: './vue.min.js',
+        //     toType: 'file'
+        // },
         {
             from: 'static/index.html',
             to: './index.html',
