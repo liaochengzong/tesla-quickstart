@@ -9,7 +9,7 @@
 	},
 	"miniprogramRoot": "dist/wx/",
 	"compileType": "miniprogram",
-	"appid": "wx32177d4998326fda",
+	"appid": "wx4c09ad5a6ae08ef2",
 	"projectname": "tesla-quicksatrt",
 	"condition": {
 		"search": {

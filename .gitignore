@@ -1,1 +1,6 @@
 .temp
+template/node_modules
+node_modules
+template/dist
+template/.temp
+

@@ -1,8 +1,8 @@
 import Vue from 'vue'
-import App from './App'
+import MiniProgram from './MiniProgram'
 
 Vue.config.productionTip = false
-App.mpType = 'app'
+MiniProgram.mpType = 'app'
 
-const app = new Vue(App)
+const app = new Vue(MiniProgram)
 app.$mount()

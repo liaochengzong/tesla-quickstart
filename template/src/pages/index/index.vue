@@ -17,10 +17,10 @@ export default {
   },
 
   created() {
-    console.log("tslmp---->", "created");
+    console.log("tslmp---->11", "created");
   },
   mounted() {
-    console.log("tslmp---->", "mounted");
+    console.log("tslmp---->11", "mounted");
   }
 };
 </script>
