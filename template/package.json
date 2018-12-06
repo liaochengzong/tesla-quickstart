@@ -1,12 +1,12 @@
 {
   "description": "teslajs封装，原生js封装库",
   "scripts": {
-    "start": "npm run serve",
     "serve": "serve -p 8081",
-    "dev-weex": "webpack --env.NODE_ENV=common-weex --watch",
-    "build-weex": "webpack --env.NODE_ENV=common-weex",
-    "dev-wx": "webpack --env.NODE_ENV=common-wx --watch",
-    "build-wx": "webpack --env.NODE_ENV=common-wx",
+    "serve:web": "cd dist/web && serve -p 8082",
+    "dev:weex": "webpack --env.NODE_ENV=common-weex --watch",
+    "release:weex": "webpack --env.NODE_ENV=release-weex",
+    "dev:wx": "webpack --env.NODE_ENV=common-wx --watch",
+    "release:wx": "webpack --env.NODE_ENV=release-wx",
     "link": "npm link tslmp-loader&npm link tslmpvue&npm link tesla-native-js&npm link tesla-native-js-wxsmall"
   },
   "author": "gxm",

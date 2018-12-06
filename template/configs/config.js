@@ -19,6 +19,7 @@ const config = {
     open: true,
     watchContentBase: true,
     openPage: 'web/preview.html',
+    assetsSubDirectory: '',
     watchOptions: {
       ignored: /node_modules/,
       aggregateTimeout: 300,
@@ -47,7 +48,8 @@ const config = {
     // In our experience, they generally work as expected,
     // just be aware of this issue when enabling this option.
     cssSourceMap: false,
-    proxyTable: {},
+    proxyTable: {
+    },
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
@@ -70,7 +72,7 @@ const config = {
     }
   },
   prod: {
-    env: JSON.stringify('production'),
+    env: JSON.stringify('release'),
     /**
      * Source Maps
      */
@@ -78,7 +80,8 @@ const config = {
     // https://webpack.js.org/configuration/devtool/#production
     devtool: '#source-map',
     cssSourceMap: true,
-    productionSourceMap: true
+    productionSourceMap: true,
+    assetsSubDirectory: '',
   },
   nodeConfiguration: {
     global: false,

@@ -17,7 +17,7 @@ export default {
   },
 
   created() {
-    console.log("tslmp---->11", "created");
+    console.log("tslmp---->11", "created"); 
   },
   mounted() {
     console.log("tslmp---->11", "mounted");
