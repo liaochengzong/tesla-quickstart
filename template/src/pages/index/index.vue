@@ -1,27 +1,61 @@
 <template>
-    <div class="container">
+    <div class="container" @click="jump">
         <text class="text">text标签</text>
+        <card text="组件传值">
+           <text >默认的内容</text>
+           <text slot="label1">指定slot 传入的内容</text>
+        </card>
     </div>
 </template>
 <script>
 import { navigator } from "tesla-native-js";
+import card from '@/components/card'
 export default {
   data() {
     return {
+      info:'组件使用及slot标签使用示例'
     };
   },
-
-  components: {},
-
+  config: {
+    navigationBarTitleText: '页面生命周期测试'
+  },
+  components: {
+    card
+  },
   methods: {
+    jump(){
+     wx.navigateTo({ url:"./index1" })
+    }
+  },
+  beforeCreate(){
+    console.warn('Page--Index -->beforeCreate',this);
+  },
+  created () {
+    console.warn('Page--Index -->created',this);
+  },
+  beforeMount () {
+    console.warn('Page--Index -->beforeMount',this);
+  },
+  mounted () {
+    console.warn('Page--Index -->mounted',this);
+  },
+  onLoad () {
+    console.warn('Page--Index -->onLoad',this);
+  },
+  onShow () {
+    console.warn('Page--Index -->onShow',this);
+  },
+  onReady () {
+    console.warn('Page--Index -->onReady',this);
+  },
+  onHide () {
+    console.warn('Page--Index -->onHide',this);
+  },
+  onUnload () {
+    console.warn('Page--Index -->onUnload',this);
   },
 
-  created() {
-    console.log("tslmp---->11", "created"); 
-  },
-  mounted() {
-    console.log("tslmp---->11", "mounted");
-  }
+
 };
 </script>
 

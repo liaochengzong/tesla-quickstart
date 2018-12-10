@@ -9,7 +9,7 @@ const config = {
   // router
   // common
   templateDir: '.temp',
-  entryFilePath: 'entry.js',
+  entryFilePath: 'weex_entry.js',
   dev: {
     // Various Dev Server settings
     contentBase: ROOT,

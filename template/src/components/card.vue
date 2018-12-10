@@ -1,18 +1,54 @@
 <template>
   <div class="wrapper" >
     <text class="card">{{text}}</text>
-    <slot name="label">
-         <text class="card">这个是默认的slot内容</text>
+    <slot>
     </slot>
     <slot name="label1">
-         <text class="card">这个是传入slot内容</text>
     </slot>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['text']
+  data(){
+    return {
+      text1:'12321321'
+    }
+  },
+  props:{
+    text:{type:String,default:"默认"}
+  },
+
+  beforeCreate(){
+    console.warn('Component--Card -->beforeCreate',this);
+  },
+  created () {
+    console.warn('Component--Card -->created',this);
+    console.warn('Component--Card -->created',this.text);
+  },
+  beforeMount () {
+    console.warn('Component--Card -->beforeMount',this);
+  },
+  mounted () {
+    console.warn('Component--Card -->mounted',this);
+    console.warn('Component--Card -->mounted',this.text);
+  },
+  onLoad () {
+    console.warn('Component--Card -->onLoad',this);
+  },
+  onShow () {
+    console.warn('Component--Card -->onShow',this);
+  },
+  onReady () {
+    console.warn('Component--Card -->onReady',this);
+  },
+  onHide () {
+    console.warn('Component--Card -->onHide',this);
+  },
+  onUnload () {
+    console.warn('Component--Card -->onUnload',this);
+  },
+
 }
 </script>
 

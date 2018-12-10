@@ -93,6 +93,8 @@
     "weex-vue-render": "^1.0.17",
     "tesla-mpvue-template-compiler": "^1.0.0-beta1",
     "tesla-mpvue-loader": "^1.0.0-beta2",
+    "mpvue-config-loader": "^0.1.0",
+    "mpvue-entry": "next",
     "px2rpx-loader": "^0.1.10"
   }
 }

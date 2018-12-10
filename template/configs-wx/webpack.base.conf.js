@@ -7,25 +7,13 @@ var MpvuePlugin = require('webpack-mpvue-asset-plugin')
 var glob = require('glob')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
 var relative = require('relative')
+const MpvueEntry = require('mpvue-entry')
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
-function getEntry (rootSrc) {
-  var map = {};
-  glob.sync(rootSrc + '/pages/**/main.js')
-  .forEach(file => {
-    var key = relative(rootSrc, file).replace('.js', '');
-    map[key] = file;
-  })
-   return map;
-}
-
-const appEntry = { app: resolve('./src/main.js') }
-const pagesEntry = getEntry(resolve('./src'), 'pages/**/main.js')
-const entry = Object.assign({}, appEntry, pagesEntry)
-
+const entry = MpvueEntry.getEntry('./src/app.json')
 module.exports = {
   // 如果要自定义生成的 dist 目录里面的文件路径，
   // 可以将 entry 写成 {'toPath': 'fromPath'} 的形式，
@@ -56,6 +44,11 @@ module.exports = {
         test: /\.vue$/,
         loader: 'tesla-mpvue-loader',
         options: vueLoaderConfig
+      },
+      {
+        test: /\.vue$/,
+        loader: 'mpvue-config-loader',
+        exclude: [resolve('src/components')]
       },
       {
         test: /\.js$/,
@@ -98,12 +91,7 @@ module.exports = {
   },
   plugins: [
     new MpvuePlugin(),
-    new CopyWebpackPlugin([{
-      from: '**/*.json',
-      to: ''
-    }], {
-      context: 'src/'
-    }),
+    new MpvueEntry(),
     new CopyWebpackPlugin([
       {
         from: path.resolve(__dirname, '../src/images'),
