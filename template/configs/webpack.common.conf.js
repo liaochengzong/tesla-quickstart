@@ -179,7 +179,7 @@ const webConfig = {
         use: [{
           loader: 'babel-loader'
         }],
-        exclude: /node_modules(?!(\/|\\).*(weex).*)/
+        exclude: /node_modules(?!(\/|\\).*(weex|tesla).*)/
       },
       {
         test: /\.vue(\?[^?]+)?$/,

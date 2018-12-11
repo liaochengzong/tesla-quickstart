@@ -4,4 +4,5 @@ node_modules
 template/dist
 template/.temp
 template/release
+template/config.js
 
