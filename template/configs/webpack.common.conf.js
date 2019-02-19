@@ -230,7 +230,7 @@ const webConfig = {
 const weexConfig = {
   entry: weexEntry,
   output: {
-    path: path.join(__dirname, '../dist/YC'),
+    path: path.join(__dirname, '../dist/index'),
     filename: '[name].js'
   },
   /**
